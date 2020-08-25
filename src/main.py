@@ -74,6 +74,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                 # Summarize task properties
                 event_summary = f'{task_name} [{projects[task["project_id"]]}]'
                 event_start = datetime.datetime.strptime(date, '%Y-%m-%dT%H:%M:%S') if 'T' in date else datetime.datetime.strptime(date, '%Y-%m-%d')
+                event_start_uid = re.sub(r'\D', '', str(event_start))
                 event_end = event_start + duration_timedelta if 'T' in date else event_start + datetime.timedelta(days=1)
 
                 event = ical.Event()
@@ -81,7 +82,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                 event.add('dtstart', event_start)
                 event.add('dtend', event_end)
                 event.add('dtstamp', cal_stamp)
-                event.add('uid', task['id'])
+                event.add('uid', f'{task["id"]}{event_start_uid}')
                 cal.add_component(event)
 
         # Writing the HTML contents with UTF-8
