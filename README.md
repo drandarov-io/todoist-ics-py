@@ -7,6 +7,7 @@ This python script can generate ics files for your Todoist profile.
 The simplest way to do this is to run:
 
 ```
+poetry install
 docker-compose up -d
 ```
 

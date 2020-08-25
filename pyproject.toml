@@ -5,7 +5,7 @@ description = "ICal Generator for Todoist"
 authors = ["Dmitrij Drandarov <dmitrij.drandarov@outlook.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 icalendar = "^4.0.6"
 todoist-python = "^8.1.2"
 
