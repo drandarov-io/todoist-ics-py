@@ -1,12 +1,13 @@
 [tool.poetry]
-name = "todoist-ical-py"
+name = "todoist-ics-py"
 version = "0.1.0"
 description = "ICal Generator for Todoist"
-authors = ["Your Name <you@example.com>"]
+authors = ["Dmitrij Drandarov <dmitrij.drandarov@outlook.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 icalendar = "^4.0.6"
+todoist-python = "^8.1.2"
 
 [tool.poetry.dev-dependencies]
 
