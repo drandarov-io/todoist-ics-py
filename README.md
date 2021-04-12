@@ -32,7 +32,7 @@ http://<hostname>:4000/<anyname>.ics
 You can provide the parameters `token=<your todoist token>` and `default_duration=<default duration>`.
 
 ```
-http://<hostname>:4000/<anyname>.ics?token=<your todoist token>%default_duration=15m
+http://<hostname>:4000/<anyname>.ics?token=<your todoist token>&default_duration=15m
 ```
 
 The token can also be provided through a file `./config/todoist_token`. Note however that anyone with access to your hostname can access it without adding the `token` parameter inside the URL.
